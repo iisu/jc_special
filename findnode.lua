@@ -2,7 +2,7 @@ local S = core.get_translator(core.get_current_modname())
 
 core.register_chatcommand("findnode", {
   params = "<mod:nodename> <radius>",
-  description = "Find nodes within a square radius",
+  description = S("Find nodes within a square radius"),
   privs = { server = true },
 
   func = function(name, param)

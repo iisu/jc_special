@@ -436,7 +436,7 @@ core.register_on_mods_loaded(function()
         if not inv:room_for_item("main", can) then
           core.chat_send_player(
             name,
-            S("You don't have room for the filled can.")
+            S("Inventory full.")
           )
 
           return
@@ -479,7 +479,7 @@ core.register_on_mods_loaded(function()
 
       -- Respect Cottage's public/private setting.
       if name ~= owner and public ~= "public" then
-        core.chat_send_player(name, S("This tree trunk well is owned by @1. You can't use it.", owner) )
+        core.chat_send_player(name, S("This well is owned by @1. You can't use it.", owner) )
         return
       end
 
@@ -492,7 +492,7 @@ core.register_on_mods_loaded(function()
       -- Don't fill an already-full can.
       if level >= 15 then
 
-        core.chat_send_player(name, S("Your Freshwater Can is already full."))
+        core.chat_send_player(name, S("Your can is already full."))
         return
       end
 
@@ -546,7 +546,7 @@ core.register_on_mods_loaded(function()
         meta:set_int("can_level", 15)
 
         if owner ~= "" then
-          core.chat_send_player(owner, S("Your Freshwater Can is now full!") )
+          core.chat_send_player(owner, S("Your can is now full!") )
         end
 
         core.add_particlespawner({

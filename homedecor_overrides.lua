@@ -51,7 +51,7 @@ local function mailbox_formspec(pos)
 
     "list[nodemeta:" .. spos .. ";main;1,0.5;8,4;]" ..
 
-    "button[3,5.0;4,0.8;getitems;" .. core.formspec_escape( S("Get Items") )  .. "]" ..
+    "button[3,5.0;4,0.8;getitems;" .. core.formspec_escape( S("Get Mailbox Items") )  .. "]" ..
 
     "list[current_player;main;1,6.6;8,4;]" ..
 

@@ -5,234 +5,314 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: sounds.lua
 msgid "Welcome Sounds"
 msgstr "欢迎音效"
 
+#: sounds.lua
 msgid "Memorial Block Sounds"
 msgstr "纪念方块音效"
 
+#: sounds.lua
 msgid "Monster Sounds"
 msgstr "怪物音效"
 
+#: sounds.lua
 msgid "Party Instrument Sounds"
 msgstr "派对乐器音效"
 
+#: sounds.lua
 msgid "Sound Settings"
 msgstr "声音设置"
 
+#: sounds.lua
 msgid "Cancel"
 msgstr "取消"
 
+#: sounds.lua
 msgid "Save"
 msgstr "保存"
 
+#: sounds.lua
 msgid "Configure your sound settings."
 msgstr "配置你的声音设置。"
 
+#: sounds.lua
 msgid "Sound settings saved."
 msgstr "声音设置已保存。"
 
+#: findnode.lua
 msgid "Radius cannot be greater than @1 nodes."
 msgstr "半径不能大于 @1 个节点。"
 
+#: cans.lua
 msgid "Water Can"
 msgstr "水罐"
 
+#: cans.lua
 msgid "Jumbo Water Can"
 msgstr "超大水罐"
 
+#: cans.lua
 msgid "Freshwater Can"
 msgstr "淡水罐"
 
+#: cans.lua
 msgid "Lava Can"
 msgstr "岩浆罐"
 
+#: cans.lua
 msgid "Please wait until your can has been filled."
 msgstr "请等待您的罐子装满。"
 
-msgid "You don't have room for the filled can."
-msgstr "您的物品栏没有空间放置装满的罐子。"
+#: cans.lua
+msgid "Inventory full."
+msgstr "物品栏已满。"
 
-msgid "This tree trunk well is owned by %s. You can't use it."
-msgstr "这个树干水井属于 %s。您无法使用它。"
+#: cans.lua
+msgid "This well is owned by @1. You can't use it."
+msgstr "这口井属于 @1。你不能使用它。"
 
+#: cans.lua
 msgid "The well is already being used."
 msgstr "这个水井已经有人在使用。"
 
-msgid "Your Freshwater Can is already full."
-msgstr "您的淡水罐已经装满了。"
+#: cans.lua
+msgid "Your can is already full."
+msgstr "你的油桶已经装满了。"
 
-msgid "Your Freshwater Can is now full!"
-msgstr "您的淡水罐现在已经装满了！"
+#: cans.lua
+msgid "Your can is now full!"
+msgstr "你的油桶现在装满了！"
 
+#: daybutton.lua
 msgid "Day Button"
 msgstr "白天按钮"
 
+#: daybutton.lua
 msgid "Press to skip the night."
 msgstr "按下以跳过夜晚。"
 
+#: daybutton.lua
 msgid "@1 skipped the night."
 msgstr "@1 跳过了夜晚。"
 
+#: unified_inventory_overrides.lua
 msgid "MrPhil's Wooden Bag"
 msgstr "MrPhil 的木制背包"
 
+#: welcomeplayers.lua
 msgid "Enable or disable join greeter"
 msgstr "启用或禁用加入问候功能"
 
+#: welcomeplayers.lua
 msgid "Not allowed."
 msgstr "不允许。"
 
+#: welcomeplayers.lua
 msgid "Join greeter enabled"
 msgstr "加入问候功能已启用"
 
+#: welcomeplayers.lua
 msgid "Join greeter disabled"
 msgstr "加入问候功能已禁用"
 
+#: welcomeplayers.lua
 msgid "Use: /greet on | off"
 msgstr "使用：/greet on | off"
 
+#: misc_overrides.lua
 msgid "Show loaded mods"
 msgstr "显示已加载的模组"
 
+#: misc_overrides.lua
 msgid "Loaded Mods"
 msgstr "已加载的模组"
 
+#: misc_overrides.lua
 msgid "Close"
 msgstr "关闭"
 
+#: misc_overrides.lua
 msgid "@1 is at @2"
 msgstr "@1 位于 @2"
 
+#: misc_overrides.lua
 msgid "Shows the coordinates of a player."
 msgstr "显示玩家的坐标。"
 
+#: misc_overrides.lua
 msgid "Usage: /where <player>"
 msgstr "用法：/where <player>"
 
+#: misc_overrides.lua
 msgid "Player @1 is not online."
 msgstr "玩家 @1 不在线。"
 
+#: misc_overrides.lua
 msgid "The /shutdown command has been disabled on this server."
 msgstr "此服务器已禁用 /shutdown 命令。"
 
+#: misc_overrides.lua
 msgid "Count Animalia bats"
 msgstr "统计 Animalia 蝙蝠"
 
+#: misc_overrides.lua
 msgid "There are @1 Animalia bats nearby."
 msgstr "附近有 @1 只 Animalia 蝙蝠。"
 
+#: misc_overrides.lua
 msgid "Remove all loaded Animalia bats"
 msgstr "移除所有已加载的 Animalia 蝙蝠"
 
+#: findnode.lua
+#: misc_overrides.lua
+#: sounds.lua
 msgid "Player not found."
 msgstr "未找到玩家。"
 
+#: misc_overrides.lua
 msgid "Removed @1 Animalia bats."
 msgstr "已移除 @1 只 Animalia 蝙蝠。"
 
+#: welcomeplayers.lua
 msgid "Play a welcome sound for all connected players."
 msgstr "为所有已连接的玩家播放欢迎声音。"
 
+#: welcomeplayers.lua
 msgid "Available sounds: welcome, glockenspiel, welcome_stranger\nUsage: /welcome_sound <sound>"
 msgstr "可用声音：welcome、glockenspiel、welcome_stranger\n用法：/welcome_sound <sound>"
 
+#: welcomeplayers.lua
 msgid "No sounds found with that name.\nAvailable: welcome, glockenspiel, welcome_stranger"
 msgstr "未找到该名称的声音。\n可用声音：welcome、glockenspiel、welcome_stranger"
 
+#: welcomeplayers.lua
 msgid "Playing '@1' for all connected players."
 msgstr "正在为所有已连接的玩家播放“@1”。"
 
+#: welcomeplayers.lua
 msgid "Welcome to the Just-Craft server, @1!"
 msgstr "欢迎来到 Just-Craft 服务器，@1！"
 
-msgid "Type: @1 to get your free apartment!"
-msgstr "输入：@1 来获得您的免费公寓！"
+#: welcomeplayers.lua
+msgid "Type @1 to get your free apartment!"
+msgstr "输入 @1 来获得您的免费公寓！"
 
+#: welcomeplayers.lua
 msgid "*** NEW PLAYER: @1 has joined the server for the first time. Information about apartments already sent to new player."
 msgstr "*** 新玩家：@1 首次加入服务器。有关公寓的信息已经发送给该新玩家。"
 
+#: homedecor_overrides.lua
 msgid "Mailbox for: @1"
 msgstr "@1 的邮箱"
 
+#: bones_override.lua
 msgid "Get Items"
 msgstr "获取物品"
 
+#: homedecor_overrides.lua
+msgid "Get Mailbox Items"
+msgstr "获取物品"
+
+#: homedecor_overrides.lua
 msgid "Mailbox Owner: @1"
 msgstr "邮箱所有者：@1"
 
+#: homedecor_overrides.lua
 msgid "Mailbox\nUnowned"
 msgstr "邮箱\n无主"
 
-msgid "has deposited mail for you at"
-msgstr "已为您存放邮件于"
-
+#: homedecor_overrides.lua
 msgid "[Mailbox] @1 has deposited mail for you at @2."
 msgstr "[邮箱] @1 已为您在 @2 存放邮件。"
 
+#: homedecor_overrides.lua
 msgid "Grandfather Clock\n@1"
 msgstr "落地钟\n@1"
 
+#: paste2chat.lua
 msgid "Open a text box to paste a message into chat."
 msgstr "打开文本框，将消息粘贴到聊天中。"
 
+#: paste2chat.lua
 msgid "Paste Message"
 msgstr "粘贴消息"
 
+#: paste2chat.lua
 msgid "Enter your chat message here (maximum 500 characters):"
 msgstr "在此输入您的聊天消息（最多 500 个字符）："
 
+#: paste2chat.lua
 msgid "SEND"
 msgstr "发送"
 
+#: infotext.lua
+#: paste2chat.lua
 msgid "CANCEL"
 msgstr "取消"
 
+#: paste2chat.lua
 msgid "Your message is limited to 500 characters."
 msgstr "您的消息最多只能包含 500 个字符。"
 
+#: paste2chat.lua
 msgid "The message cannot be empty."
 msgstr "消息不能为空。"
 
+#: mobs_monsters.lua
 msgid "Trooper"
 msgstr "士兵"
 
+#: mobs_monsters.lua
 msgid "This Trooper must be tamed before you can protect it."
 msgstr "必须先驯服这个士兵，才能保护它。"
 
+#: mobs_monsters.lua
+msgid "This Trooper belongs to @1."
+msgstr "这个士兵属于 @1。"
+
+#: mobs_monsters.lua
 msgid "Castle Guard"
 msgstr "城堡守卫"
 
+#: mobs_monsters.lua
 msgid "@1 was eliminated by @2!"
 msgstr "@1 被 @2 消灭了！"
 
+#: findnode.lua
 msgid "Find nodes within a square radius"
 msgstr "在方形半径范围内查找节点"
 
-msgid "Player not found."
-msgstr "未找到玩家。"
-
+#: findnode.lua
 msgid "Usage: /findnode <mod:nodename> <radius>"
 msgstr "用法：/findnode <mod:nodename> <radius>"
 
+#: findnode.lua
 msgid "Radius must be a number."
 msgstr "半径必须是数字。"
 
+#: findnode.lua
 msgid "Radius must be greater than 0."
 msgstr "半径必须大于 0。"
 
+#: findnode.lua
 msgid "Could not determine your position."
 msgstr "无法确定您的位置。"
 
+#: findnode.lua
 msgid "Unknown node: @1"
 msgstr "未知节点：@1"
 
+#: findnode.lua
 msgid "No @1 found within @2 nodes."
 msgstr "在 @2 个节点范围内未找到 @1。"
 
+#: findnode.lua
 msgid "Found @1 @2 within a @3 node square:"
 msgstr "在 @3 节点的方形范围内找到了 @1 个 @2："
 
+#: findnode.lua
 msgid "@1 - @2 nodes away"
 msgstr "@1 - 距离 @2 个节点"
 
@@ -288,23 +368,82 @@ msgstr "监禁玩家"
 msgid "Unjails players"
 msgstr "释放玩家"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner"
 msgstr "直接生物生成器"
 
+#: direct_mob_spawner.lua
 msgid "(mob name) (min light) (max light) (amount) (player distance) (Y offset)"
 msgstr "（生物名称）（最小亮度）（最大亮度）（数量）（玩家距离）（Y轴偏移）"
 
+#: direct_mob_spawner.lua
 msgid "Command:"
 msgstr "命令："
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner Not Active (enter settings)"
 msgstr "直接生物生成器未启用（请输入设置）"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner Active (@1)"
 msgstr "直接生物生成器已启用（@1）"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner settings failed!"
 msgstr "直接生物生成器设置失败！"
 
+#: direct_mob_spawner.lua
 msgid "Syntax: “name min_light[0-15] max_light[0-15] max_mobs[0 to disable] player_distance[1-20] y_offset[-9 to 9]”"
 msgstr "语法：“名称 min_light[0-15] max_light[0-15] max_mobs[0 表示禁用] player_distance[1-20] y_offset[-9 到 9]”"
+
+#: bones_override.lua
+msgid "Bones"
+msgstr "骨头"
+
+#: bones_override.lua
+msgid "Drop Items"
+msgstr "丢弃物品"
+
+#: bones_override.lua
+msgid "Your Inventory"
+msgstr "你的物品栏"
+
+#: infotext.lua
+msgid "Edit Infotext: @1"
+msgstr "编辑信息文本：@1"
+
+#: infotext.lua
+msgid "Infotext"
+msgstr "信息文本"
+
+#: infotext.lua
+msgid "Infotext cleared."
+msgstr "信息文本已清除。"
+
+#: infotext.lua
+msgid "Infotext cleared; this node has no default infotext."
+msgstr "信息文本已清除；此方块没有默认信息文本。"
+
+#: infotext.lua
+msgid "Infotext reset to default."
+msgstr "信息文本已恢复为默认值。"
+
+#: infotext.lua
+msgid "Infotext updated."
+msgstr "信息文本已更新。"
+
+#: infotext.lua
+msgid "SAVE"
+msgstr "保存"
+
+#: infotext.lua
+msgid "The node has changed. Infotext was not modified."
+msgstr "方块已发生变化。信息文本未被修改。"
+
+#: prison.lua
+msgid "You cannot enter this area while jailed."
+msgstr "你在监狱中时无法进入此区域。"
+
+#: infotext.lua
+msgid "You need server privileges to use this."
+msgstr "你需要服务器权限才能使用此功能。"

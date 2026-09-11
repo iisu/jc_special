@@ -118,42 +118,7 @@ if core.get_modpath("xpanes") then
     end,
   })
 end
--- if core.get_modpath("xpanes") then
-  -- xpanes.register_pane("prison_bars", {
-    -- description = S("Prison Bars"),
 
-    -- tiles = {"prison_bars.png"},
-
-    -- drawtype = "airlike",
-    -- paramtype = "light",
-
-    -- textures = {
-      -- "prison_bars.png",
-      -- "prison_bars.png",
-      -- "prison_bars.png",
-    -- },
-
-    -- inventory_image = "prison_bars.png",
-    -- wield_image = "prison_bars.png",
-
-    -- sounds = default.node_sound_metal_defaults(),
-
-    -- groups = {
-      -- cracky = 1,
-      -- pane = 1,
-      -- flow_through = 1,
-    -- },
-
-    -- on_dig = function(pos, node, digger)
-      -- prison_on_dig(
-        -- pos,
-        -- node,
-        -- digger,
-        -- "default_metal_footstep"
-      -- )
-    -- end,
-  -- })
--- end
 
 ----------------------------------------------------------------
 -- PRISON STONE / FLOOR NODES
@@ -161,7 +126,7 @@ end
 local prison_nodes = {
   {
     name = "prison_floor",
-    description = "Prison Floor",
+    description = S("Prison Floor"),
     texture = "prison_floor.png",
     sounds = default.node_sound_stone_defaults(),
     dig_sound = "default_dig_cracky",
@@ -169,7 +134,7 @@ local prison_nodes = {
 
   {
     name = "prison_stone",
-    description = "Prison Stone",
+    description = S("Prison Stone"),
     texture = "prison_stone.png",
     sounds = default.node_sound_stone_defaults(),
     dig_sound = "default_dig_cracky",
@@ -177,7 +142,7 @@ local prison_nodes = {
 
   {
     name = "prison_stone_bricks",
-    description = "Prison Stone Bricks",
+    description = S("Prison Stone Bricks"),
     texture = "prison_stone_bricks.png",
     sounds = default.node_sound_stone_defaults(),
     dig_sound = "default_dig_cracky",

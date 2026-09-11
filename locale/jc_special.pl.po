@@ -5,234 +5,314 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: sounds.lua
 msgid "Welcome Sounds"
 msgstr "Dźwięki powitalne"
 
+#: sounds.lua
 msgid "Memorial Block Sounds"
 msgstr "Dźwięki bloków pamiątkowych"
 
+#: sounds.lua
 msgid "Monster Sounds"
 msgstr "Dźwięki potworów"
 
+#: sounds.lua
 msgid "Party Instrument Sounds"
 msgstr "Dźwięki instrumentów imprezowych"
 
+#: sounds.lua
 msgid "Sound Settings"
 msgstr "Ustawienia dźwięku"
 
+#: sounds.lua
 msgid "Cancel"
 msgstr "Anuluj"
 
+#: sounds.lua
 msgid "Save"
 msgstr "Zapisz"
 
+#: sounds.lua
 msgid "Configure your sound settings."
 msgstr "Skonfiguruj ustawienia dźwięku."
 
+#: sounds.lua
 msgid "Sound settings saved."
 msgstr "Ustawienia dźwięku zostały zapisane."
 
+#: findnode.lua
 msgid "Radius cannot be greater than @1 nodes."
 msgstr "Promień nie może być większy niż @1 węzłów."
 
+#: cans.lua
 msgid "Water Can"
 msgstr "Konewka na wodę"
 
+#: cans.lua
 msgid "Jumbo Water Can"
 msgstr "Duża konewka na wodę"
 
+#: cans.lua
 msgid "Freshwater Can"
 msgstr "Konewka na świeżą wodę"
 
+#: cans.lua
 msgid "Lava Can"
 msgstr "Konewka na lawę"
 
+#: cans.lua
 msgid "Please wait until your can has been filled."
 msgstr "Poczekaj, aż Twoja konewka zostanie napełniona."
 
-msgid "You don't have room for the filled can."
-msgstr "Nie masz miejsca na napełnioną konewkę."
+#: cans.lua
+msgid "Inventory full."
+msgstr "Ekwipunek jest pełny."
 
-msgid "This tree trunk well is owned by %s. You can't use it."
-msgstr "Ta studnia w pniu drzewa należy do %s. Nie możesz jej używać."
+#: cans.lua
+msgid "This well is owned by @1. You can't use it."
+msgstr "Ta studnia należy do @1. Nie możesz jej używać."
 
+#: cans.lua
 msgid "The well is already being used."
 msgstr "Studnia jest już używana."
 
-msgid "Your Freshwater Can is already full."
-msgstr "Twoja konewka na świeżą wodę jest już pełna."
+#: cans.lua
+msgid "Your can is already full."
+msgstr "Twój kanister jest już pełny."
 
-msgid "Your Freshwater Can is now full!"
-msgstr "Twoja konewka na świeżą wodę jest teraz pełna!"
+#: cans.lua
+msgid "Your can is now full!"
+msgstr "Twój kanister jest teraz pełny!"
 
+#: daybutton.lua
 msgid "Day Button"
 msgstr "Przycisk dnia"
 
+#: daybutton.lua
 msgid "Press to skip the night."
 msgstr "Naciśnij, aby pominąć noc."
 
+#: daybutton.lua
 msgid "@1 skipped the night."
 msgstr "@1 pominął noc."
 
+#: unified_inventory_overrides.lua
 msgid "MrPhil's Wooden Bag"
 msgstr "Drewniana torba MrPhila"
 
+#: welcomeplayers.lua
 msgid "Enable or disable join greeter"
 msgstr "Włącz lub wyłącz powitanie przy dołączeniu"
 
+#: welcomeplayers.lua
 msgid "Not allowed."
 msgstr "Niedozwolone."
 
+#: welcomeplayers.lua
 msgid "Join greeter enabled"
 msgstr "Powitanie przy dołączeniu włączone"
 
+#: welcomeplayers.lua
 msgid "Join greeter disabled"
 msgstr "Powitanie przy dołączeniu wyłączone"
 
+#: welcomeplayers.lua
 msgid "Use: /greet on | off"
 msgstr "Użycie: /greet on | off"
 
+#: misc_overrides.lua
 msgid "Show loaded mods"
 msgstr "Pokaż załadowane mody"
 
+#: misc_overrides.lua
 msgid "Loaded Mods"
 msgstr "Załadowane mody"
 
+#: misc_overrides.lua
 msgid "Close"
 msgstr "Zamknij"
 
+#: misc_overrides.lua
 msgid "@1 is at @2"
 msgstr "@1 jest w @2"
 
+#: misc_overrides.lua
 msgid "Shows the coordinates of a player."
 msgstr "Pokazuje współrzędne gracza."
 
+#: misc_overrides.lua
 msgid "Usage: /where <player>"
 msgstr "Użycie: /where <gracz>"
 
+#: misc_overrides.lua
 msgid "Player @1 is not online."
 msgstr "Gracz @1 nie jest online."
 
+#: misc_overrides.lua
 msgid "The /shutdown command has been disabled on this server."
 msgstr "Polecenie /shutdown zostało wyłączone na tym serwerze."
 
+#: misc_overrides.lua
 msgid "Count Animalia bats"
 msgstr "Policz nietoperze Animalia"
 
+#: misc_overrides.lua
 msgid "There are @1 Animalia bats nearby."
 msgstr "W pobliżu znajduje się @1 nietoperzy Animalia."
 
+#: misc_overrides.lua
 msgid "Remove all loaded Animalia bats"
 msgstr "Usuń wszystkie załadowane nietoperze Animalia"
 
+#: findnode.lua
+#: misc_overrides.lua
+#: sounds.lua
 msgid "Player not found."
 msgstr "Nie znaleziono gracza."
 
+#: misc_overrides.lua
 msgid "Removed @1 Animalia bats."
 msgstr "Usunięto @1 nietoperzy Animalia."
 
+#: welcomeplayers.lua
 msgid "Play a welcome sound for all connected players."
 msgstr "Odtwórz dźwięk powitalny dla wszystkich połączonych graczy."
 
+#: welcomeplayers.lua
 msgid "Available sounds: welcome, glockenspiel, welcome_stranger\nUsage: /welcome_sound <sound>"
 msgstr "Dostępne dźwięki: welcome, glockenspiel, welcome_stranger\nUżycie: /welcome_sound <dźwięk>"
 
+#: welcomeplayers.lua
 msgid "No sounds found with that name.\nAvailable: welcome, glockenspiel, welcome_stranger"
 msgstr "Nie znaleziono dźwięków o tej nazwie.\nDostępne: welcome, glockenspiel, welcome_stranger"
 
+#: welcomeplayers.lua
 msgid "Playing '@1' for all connected players."
 msgstr "Odtwarzanie „@1” dla wszystkich połączonych graczy."
 
+#: welcomeplayers.lua
 msgid "Welcome to the Just-Craft server, @1!"
 msgstr "Witamy na serwerze Just-Craft, @1!"
 
-msgid "Type: @1 to get your free apartment!"
-msgstr "Wpisz: @1, aby otrzymać swoje darmowe mieszkanie!"
+#: welcomeplayers.lua
+msgid "Type @1 to get your free apartment!"
+msgstr "Wpisz @1, aby otrzymać swoje darmowe mieszkanie!"
 
+#: welcomeplayers.lua
 msgid "*** NEW PLAYER: @1 has joined the server for the first time. Information about apartments already sent to new player."
 msgstr "*** NOWY GRACZ: @1 dołączył do serwera po raz pierwszy. Informacje o mieszkaniach zostały już wysłane do nowego gracza."
 
+#: homedecor_overrides.lua
 msgid "Mailbox for: @1"
 msgstr "Skrzynka pocztowa: @1"
 
+#: bones_override.lua
 msgid "Get Items"
+msgstr "Zabierz przedmioty"
+
+#: homedecor_overrides.lua
+msgid "Get Mailbox Items"
 msgstr "Odbierz przedmioty"
 
+#: homedecor_overrides.lua
 msgid "Mailbox Owner: @1"
 msgstr "Właściciel skrzynki: @1"
 
+#: homedecor_overrides.lua
 msgid "Mailbox\nUnowned"
 msgstr "Skrzynka pocztowa\nBez właściciela"
 
-msgid "has deposited mail for you at"
-msgstr "zostawił dla Ciebie pocztę w"
-
+#: homedecor_overrides.lua
 msgid "[Mailbox] @1 has deposited mail for you at @2."
-msgstr "[Skrzynka pocztowa] @1 zostawił dla Ciebie pocztę w @2."
+msgstr "[Skrzynka pocztowa] Przesyłka od @1 w @2."
 
+#: homedecor_overrides.lua
 msgid "Grandfather Clock\n@1"
 msgstr "Zegar stojący\n@1"
 
+#: paste2chat.lua
 msgid "Open a text box to paste a message into chat."
 msgstr "Otwórz pole tekstowe, aby wkleić wiadomość na czat."
 
+#: paste2chat.lua
 msgid "Paste Message"
 msgstr "Wklej wiadomość"
 
+#: paste2chat.lua
 msgid "Enter your chat message here (maximum 500 characters):"
-msgstr "Wpisz lub wklej tutaj wiadomość na czat (maksymalnie 500 znaków):"
+msgstr "Wpisz lub wklej tutaj swoją wiadomość na czat (maksymalnie 500 znaków):"
 
+#: paste2chat.lua
 msgid "SEND"
 msgstr "WYŚLIJ"
 
+#: infotext.lua
+#: paste2chat.lua
 msgid "CANCEL"
 msgstr "ANULUJ"
 
+#: paste2chat.lua
 msgid "Your message is limited to 500 characters."
-msgstr "Twoja wiadomość jest ograniczona do 500 znaków."
+msgstr "Wiadomość nie może przekroczyć 500 znaków."
 
+#: paste2chat.lua
 msgid "The message cannot be empty."
 msgstr "Wiadomość nie może być pusta."
 
+#: mobs_monsters.lua
 msgid "Trooper"
 msgstr "Trooper"
 
+#: mobs_monsters.lua
 msgid "This Trooper must be tamed before you can protect it."
 msgstr "Ten Trooper musi zostać oswojony, zanim będzie można go chronić."
 
+#: mobs_monsters.lua
+msgid "This Trooper belongs to @1."
+msgstr "Ten Trooper należy do @1."
+
+#: mobs_monsters.lua
 msgid "Castle Guard"
 msgstr "Strażnik Zamku"
 
+#: mobs_monsters.lua
 msgid "@1 was eliminated by @2!"
 msgstr "@1 został wyeliminowany przez @2!"
 
+#: findnode.lua
 msgid "Find nodes within a square radius"
 msgstr "Znajdź bloki w kwadratowym promieniu"
 
-msgid "Player not found."
-msgstr "Nie znaleziono gracza."
-
+#: findnode.lua
 msgid "Usage: /findnode <mod:nodename> <radius>"
 msgstr "Użycie: /findnode <mod:nodename> <promień>"
 
+#: findnode.lua
 msgid "Radius must be a number."
 msgstr "Promień musi być liczbą."
 
+#: findnode.lua
 msgid "Radius must be greater than 0."
 msgstr "Promień musi być większy od 0."
 
+#: findnode.lua
 msgid "Could not determine your position."
 msgstr "Nie można określić twojej pozycji."
 
+#: findnode.lua
 msgid "Unknown node: @1"
 msgstr "Nieznany blok: @1"
 
+#: findnode.lua
 msgid "No @1 found within @2 nodes."
 msgstr "Nie znaleziono @1 w promieniu @2 bloków."
 
+#: findnode.lua
 msgid "Found @1 @2 within a @3 node square:"
 msgstr "Znaleziono @1 @2 w kwadracie o boku @3 bloków:"
 
+#: findnode.lua
 msgid "@1 - @2 nodes away"
 msgstr "@1 - @2 bloków stąd"
 
@@ -270,7 +350,7 @@ msgstr "Gracz @1 jest już w więzieniu."
 
 #: prison.lua
 msgid "Player @1 has been jailed"
-msgstr "Gracz @1 został uwięziony"
+msgstr "Gracz @1 trafił do więzienia"
 
 #: prison.lua
 msgid "Player @1 was never jailed"
@@ -288,23 +368,82 @@ msgstr "Więzi graczy"
 msgid "Unjails players"
 msgstr "Zwalnia graczy z więzienia"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner"
 msgstr "Bezpośredni spawner mobów"
 
+#: direct_mob_spawner.lua
 msgid "(mob name) (min light) (max light) (amount) (player distance) (Y offset)"
 msgstr "(nazwa moba) (min. światło) (maks. światło) (ilość) (odległość gracza) (przesunięcie Y)"
 
+#: direct_mob_spawner.lua
 msgid "Command:"
 msgstr "Polecenie:"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner Not Active (enter settings)"
 msgstr "Bezpośredni spawner mobów nieaktywny (wprowadź ustawienia)"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner Active (@1)"
 msgstr "Bezpośredni spawner mobów aktywny (@1)"
 
+#: direct_mob_spawner.lua
 msgid "Direct Mob Spawner settings failed!"
 msgstr "Ustawienia bezpośredniego spawnera mobów nie powiodły się!"
 
+#: direct_mob_spawner.lua
 msgid "Syntax: “name min_light[0-15] max_light[0-15] max_mobs[0 to disable] player_distance[1-20] y_offset[-9 to 9]”"
 msgstr "Składnia: „nazwa min_light[0-15] max_light[0-15] max_mobs[0 aby wyłączyć] player_distance[1-20] y_offset[-9 do 9]”"
+
+#: bones_override.lua
+msgid "Bones"
+msgstr "Kości"
+
+#: bones_override.lua
+msgid "Drop Items"
+msgstr "Upuść przedmioty"
+
+#: bones_override.lua
+msgid "Your Inventory"
+msgstr "Twój ekwipunek"
+
+#: infotext.lua
+msgid "Edit Infotext: @1"
+msgstr "Edytuj infotext: @1"
+
+#: infotext.lua
+msgid "Infotext"
+msgstr "Infotext"
+
+#: infotext.lua
+msgid "Infotext cleared."
+msgstr "Infotext wyczyszczony."
+
+#: infotext.lua
+msgid "Infotext cleared; this node has no default infotext."
+msgstr "Infotext wyczyszczony; ten blok nie ma domyślnego infotextu."
+
+#: infotext.lua
+msgid "Infotext reset to default."
+msgstr "Infotext przywrócony do wartości domyślnej."
+
+#: infotext.lua
+msgid "Infotext updated."
+msgstr "Infotext zaktualizowany."
+
+#: infotext.lua
+msgid "SAVE"
+msgstr "ZAPISZ"
+
+#: infotext.lua
+msgid "The node has changed. Infotext was not modified."
+msgstr "Blok został zmieniony. Infotext nie został zmodyfikowany."
+
+#: prison.lua
+msgid "You cannot enter this area while jailed."
+msgstr "Nie możesz wejść na ten obszar, gdy jesteś w więzieniu."
+
+#: infotext.lua
+msgid "You need server privileges to use this."
+msgstr "Potrzebujesz uprawnień serwera, aby tego użyć."

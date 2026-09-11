@@ -121,6 +121,13 @@ local function json_encode(value)
 end
 
 -------------------------------------------------------------------------------
+-- Count loaded mods
+-------------------------------------------------------------------------------
+local function get_mod_count()
+  return #core.get_modnames()
+end
+
+-------------------------------------------------------------------------------
 -- Count registered players
 -------------------------------------------------------------------------------
 local function get_total_player_count()
@@ -177,6 +184,40 @@ local function get_online_player_names()
 end
 
 -------------------------------------------------------------------------------
+-- Get server rules from jc_welcome
+-------------------------------------------------------------------------------
+local function get_rules()
+  local rules = {}
+
+  if not jc_welcome.rules_raw then
+    return rules
+  end
+
+  for i = 1, #jc_welcome.rules_raw do
+    rules[#rules + 1] = jc_welcome.rules_raw[i]
+  end
+
+  return rules
+end
+
+-------------------------------------------------------------------------------
+-- Get server rules in Spanish from jc_welcome
+-------------------------------------------------------------------------------
+local function get_rules_es()
+  local rules_es = {}
+
+  if not jc_welcome.rules_es_raw then
+    return rules_es
+  end
+
+  for i = 1, #jc_welcome.rules_es_raw do
+    rules_es[#rules_es + 1] = jc_welcome.rules_es_raw[i]
+  end
+
+  return rules_es
+end
+
+-------------------------------------------------------------------------------
 -- Generate website data
 -------------------------------------------------------------------------------
 local function get_website_data()
@@ -186,6 +227,7 @@ local function get_website_data()
     server = {
       name = core.settings:get("server_name") or "Just-Craft",
       luanti_version = version.string or "unknown",
+      mods = get_mod_count(),
     },
 
     players = {
@@ -195,6 +237,8 @@ local function get_website_data()
     },
 
     places = get_places(),
+    rules = get_rules(),
+    rules_es = get_rules_es(),
 
     updated = os.date("!%Y-%m-%dT%H:%M:%SZ"),
   }
@@ -258,3 +302,16 @@ core.register_globalstep(function(dtime)
   end
 end)
 
+-------------------------------------------------------------------------------
+-- When a player joins, write the website's server.json
+-------------------------------------------------------------------------------
+core.register_on_joinplayer(function(player)
+  write_website_json()
+end)
+
+-------------------------------------------------------------------------------
+-- When a player leaves or times out, write the website's server.json
+-------------------------------------------------------------------------------
+core.register_on_leaveplayer(function()
+  write_website_json()
+end)

@@ -21,6 +21,12 @@ local S = core.get_translator(core.get_current_modname())
 local monster_sounds_storage = core.get_mod_storage()
 
 ----------------------------------------------------------------
+-- LETTING THE PYTHON LOCALE PO CREATOR SEE THE DANG NAMES
+----------------------------------------------------------------
+local temp_trooper_name_for_translation = S("Trooper")
+local temp_castle_gaurd_name_for_translation = S("Castle Guard")
+
+----------------------------------------------------------------
 -- SHARED SETTINGS
 ----------------------------------------------------------------
 
@@ -78,82 +84,6 @@ local registered_monsters = {}
 ----------------------------------------------------------------
 
 local last_attackers = {}
-
-----------------------------------------------------------------
--- MONSTER SOUND SETTINGS
-----------------------------------------------------------------
-
-core.register_chatcommand("jc_special_sounds_monsters", {
-  params = "<on|off>",
-  description = S("Enable or disable monster sounds."),
-
-  func = function(name, param)
-    local player = core.get_player_by_name(name)
-
-    if not player then
-      return false, S("Player not found.")
-    end
-
-    local meta = player:get_meta()
-
-    param = param:lower()
-
-    if param == "off" then
-      meta:set_string("jc_special_sounds_monsters", "off")
-      monster_sounds_storage:set_string("disabled:" .. name, "off")
-      core.log("action", "[JC_SPECIAL MONSTER SOUNDS] " .. name .. " turned _OFF_ monster sounds")
-      return true, S("Monster sounds disabled.")
-    elseif param == "on" then
-      meta:set_string("jc_special_sounds_monsters", "on")
-      monster_sounds_storage:set_string( "disabled:" .. name, "" )
-      core.log("action", "[JC_SPECIAL MONSTER SOUNDS] " .. name .. " turned ON monster sounds" )
-      return true, S("Monster sounds enabled.")
-    end
-
-    return false, S("Usage: /jc_special_sounds_monsters <on|off>")
-  end,
-})
-
-----------------------------------------------------------------
--- LIST PLAYERS WITH MONSTER SOUNDS DISABLED
-----------------------------------------------------------------
-core.register_chatcommand("list_jc_special_sounds_monsters", {
-  params = "",
-  description = S("List players who have monster sounds disabled."),
-  privs = {
-    server = true,
-  },
-
-  func = function(name, param)
-    local disabled_players = {}
-
-    local keys = monster_sounds_storage:get_keys()
-
-    for _, key in ipairs(keys) do
-      if key:sub(1, 9) == "disabled:" then
-        local player_name = key:sub(10)
-
-        if monster_sounds_storage:get_string(key) == "off" then
-          table.insert(disabled_players, player_name)
-        end
-      end
-    end
-
-    table.sort(disabled_players)
-
-    if #disabled_players == 0 then
-      return true, S("No players have monster sounds disabled.")
-    end
-
-    core.chat_send_player(name, core.colorize(PLAYER_NAME_COLOR, S("Players with monster sounds disabled (@1):", #disabled_players ) ) )
-
-    for _, player_name in ipairs(disabled_players) do
-      core.chat_send_player(name, "  " .. core.colorize("#FEC0C0", player_name) )
-    end
-
-    return true
-  end,
-})
 
 ----------------------------------------------------------------
 -- MONSTER HELPER METHODS
@@ -1733,6 +1663,7 @@ monsterDefinitions.trooper = {
     "talamh's undercover account",
     "talamh's Dirt Witness",
     "talamh's Dirty Alibi",
+    "talamh's dirty secret",
     "talamh's Dirt Accountant",
     "Definitely Not Dirt",
     "Probably Dirt",
@@ -1759,11 +1690,13 @@ monsterDefinitions.trooper = {
     "Nemo Not The Fish",
     "Captain Memo",
     "Captain Neko",
+    "jesus crisdan",
     "crisdan #2",
     "crisdan #3",
     "crisdan #9",
     "crisdan #67",
     "crisdan #81",
+    "Ooo Me So Trooper",
     "Plan B",
     "Plan C",
     "Plan Z",
@@ -1869,6 +1802,7 @@ monsterDefinitions.trooper = {
     ----------------------------------------------------------------
   -- TROOPER TAMING
   ----------------------------------------------------------------
+  --[[
   on_rightclick = function(self, clicker)
     if not clicker or not clicker:is_player() then
       return
@@ -1921,6 +1855,207 @@ monsterDefinitions.trooper = {
       end
     end
   end,
+
+  on_rightclick = function(self, clicker)
+    if not clicker or not clicker:is_player() then
+      return
+    end
+
+    local player_name = clicker:get_player_name()
+
+    --------------------------------------------------------------
+    -- 1. Feed / Tame
+    --------------------------------------------------------------
+    if mobs:feed_tame(self, clicker, 4, true, true) then
+      if self.tamed and self.jc_monster_name then
+        self.owner = player_name
+
+        self.nametag = core.colorize("#FFFF00", self.jc_monster_name) .. core.colorize("#AAAAAA", " (" .. player_name .. ")")
+
+        if self.update_tag then
+          self:update_tag()
+        else
+          self.object:set_properties({ nametag = self.nametag })
+        end
+      end
+
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 2. Must be tamed
+    --------------------------------------------------------------
+    if not self.tamed then
+      core.chat_send_player(player_name, S("This Trooper must be tamed before you can protect it.") )
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 3. Ownership check
+    --
+    -- The owner can use their Trooper normally.
+    -- Players with the ban privilege can take ownership.
+    --------------------------------------------------------------
+    local has_ban_priv = core.check_player_privs(player_name, { ban = true })
+    if self.owner and self.owner ~= "" and self.owner ~= player_name and not has_ban_priv then
+      core.chat_send_player(player_name, S("This Trooper belongs to @1.", self.owner) )
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 4. Staff with ban privilege can take ownership
+    --------------------------------------------------------------
+    if has_ban_priv and self.owner ~= player_name then
+      local old_owner = self.owner
+
+      self.owner = player_name
+
+      if self.jc_monster_name then
+        self.nametag = core.colorize("#FFFF00", self.jc_monster_name) .. core.colorize("#AAAAAA", " (" .. player_name .. ")")
+
+        if self.update_tag then
+          self:update_tag()
+        else
+          self.object:set_properties({
+            nametag = self.nametag
+          })
+        end
+      end
+
+      core.log("action", "[jc_special] " .. player_name .. " took ownership of Trooper from " .. tostring(old_owner) )
+    end
+
+    --------------------------------------------------------------
+    -- 5. Protect
+    --------------------------------------------------------------
+    if mobs:protect(self, clicker) then
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 6. Capture
+    --------------------------------------------------------------
+    if self.tamed then
+
+      -- Owner is already verified above.
+      self.owner = player_name
+
+      if self.jc_monster_name then
+        self.nametag = core.colorize("#FFFF00", self.jc_monster_name) .. core.colorize("#AAAAAA", " (" .. player_name .. ")")
+
+        if self.update_tag then
+          self:update_tag()
+        else
+          self.object:set_properties({ nametag = self.nametag })
+        end
+      end
+
+      if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then
+        return
+      end
+    end
+  end,
+  ]]
+
+  on_rightclick = function(self, clicker)
+    if not clicker or not clicker:is_player() then
+      return
+    end
+
+    local player_name = clicker:get_player_name()
+
+    --------------------------------------------------------------
+    -- 1. Ownership check BEFORE feeding/taming
+    --
+    -- The owner can feed their Trooper normally.
+    -- Players with the ban privilege can bypass ownership.
+    --------------------------------------------------------------
+    local has_ban_priv = core.check_player_privs(player_name, { ban = true })
+
+    if self.tamed and self.owner and self.owner ~= "" and self.owner ~= player_name and not has_ban_priv then
+      core.chat_send_player(player_name, S("This Trooper belongs to @1.", self.owner))
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 2. Feed / Tame
+    --------------------------------------------------------------
+    if mobs:feed_tame(self, clicker, 4, true, true) then
+      if self.tamed and self.jc_monster_name then
+        self.owner = player_name
+
+        self.nametag = core.colorize("#FFFF00", self.jc_monster_name) .. core.colorize("#AAAAAA", " (" .. player_name .. ")")
+
+        if self.update_tag then
+          self:update_tag()
+        else
+          self.object:set_properties({ nametag = self.nametag })
+        end
+      end
+
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 3. Must be tamed
+    --------------------------------------------------------------
+    if not self.tamed then
+      core.chat_send_player( player_name, S("This Trooper must be tamed before you can protect it.") )
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 4. Staff with ban privilege can take ownership
+    --------------------------------------------------------------
+    if has_ban_priv and self.owner ~= player_name then
+      local old_owner = self.owner
+
+      self.owner = player_name
+
+      if self.jc_monster_name then
+        self.nametag = core.colorize("#FFFF00", self.jc_monster_name) .. core.colorize("#AAAAAA", " (" .. player_name .. ")")
+
+        if self.update_tag then
+          self:update_tag()
+        else
+          self.object:set_properties({ nametag = self.nametag })
+        end
+      end
+
+      core.log("action", "[jc_special] " .. player_name .. " took ownership of Trooper from " .. tostring(old_owner) )
+    end
+
+    --------------------------------------------------------------
+    -- 5. Protect
+    --------------------------------------------------------------
+    if mobs:protect(self, clicker) then
+      return
+    end
+
+    --------------------------------------------------------------
+    -- 6. Capture
+    --------------------------------------------------------------
+    if self.tamed then
+
+      -- Owner is already verified above.
+      self.owner = player_name
+
+      if self.jc_monster_name then
+        self.nametag = core.colorize("#FFFF00", self.jc_monster_name) .. core.colorize("#AAAAAA", " (" .. player_name .. ")")
+
+        if self.update_tag then
+          self:update_tag()
+        else
+          self.object:set_properties({ nametag = self.nametag })
+        end
+      end
+
+      if mobs:capture_mob(self, clicker, 30, 50, 80, false, nil) then
+        return
+      end
+    end
+  end,
+
   ----------------------------------------------------------------
   -- DROPS
   ----------------------------------------------------------------

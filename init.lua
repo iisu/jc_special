@@ -1,6 +1,5 @@
 local S = core.get_translator(core.get_current_modname())
 local modpath = core.get_modpath(core.get_current_modname())
-
 local http = core.request_http_api and core.request_http_api()
 
 if http then
@@ -31,4 +30,5 @@ dofile(modpath .. "/direct_mob_spawner.lua")
 -- dofile(modpath .. "/mobs_monster_castle_guard.lua")
 dofile(modpath .. "/dumpnodes.lua")
 dofile(modpath .. "/sounds.lua")
+dofile(modpath .. "/bones_override.lua")
 dofile(modpath .. "/website.lua")

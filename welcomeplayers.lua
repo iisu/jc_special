@@ -65,7 +65,7 @@ core.register_on_newplayer(function(player)
     core.chat_send_player(new_name, core.colorize("#00FF88", "======================================================="))
     core.chat_send_player(new_name, core.colorize("#FFFF00", S("Welcome to the Just-Craft server, @1!", new_name) ))
     core.chat_send_player(new_name, "")
-    core.chat_send_player(new_name, core.colorize("#FFFFFF", S("Type: @1 to get your free apartment!", core.colorize("#FFFF00", "/apt") ) ) )
+    core.chat_send_player(new_name, core.colorize("#FFFFFF", S("Type @1 to get your free apartment!", core.colorize("#FFFF00", "/apt") ) ) )
     core.chat_send_player(new_name, core.colorize("#00FF88", "======================================================="))
 
     -- core.sound_play("welcome_stranger", {
