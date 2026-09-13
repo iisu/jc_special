@@ -447,3 +447,71 @@ msgstr "Du kannst diesen Bereich nicht betreten, solange du im Gefängnis bist."
 #: infotext.lua
 msgid "You need server privileges to use this."
 msgstr "Du benötigst Serverrechte, um dies zu verwenden."
+
+#: stadium_seats.lua
+msgid "General Stadium Seat (@1)"
+msgstr "Allgemeiner Stadionsitz (@1)"
+
+#: stadium_seats.lua
+msgid "Dugout Seat (@1)"
+msgstr "Sitz auf der Ersatzbank (@1)"
+
+#: stadium_seats.lua
+msgid "White"
+msgstr "Weiß"
+
+#: stadium_seats.lua
+msgid "Grey"
+msgstr "Grau"
+
+#: stadium_seats.lua
+msgid "Dark Grey"
+msgstr "Dunkelgrau"
+
+#: stadium_seats.lua
+msgid "Black"
+msgstr "Schwarz"
+
+#: stadium_seats.lua
+msgid "Violet"
+msgstr "Violett"
+
+#: stadium_seats.lua
+msgid "Blue"
+msgstr "Blau"
+
+#: stadium_seats.lua
+msgid "Cyan"
+msgstr "Cyan"
+
+#: stadium_seats.lua
+msgid "Dark Green"
+msgstr "Dunkelgrün"
+
+#: stadium_seats.lua
+msgid "Green"
+msgstr "Grün"
+
+#: stadium_seats.lua
+msgid "Yellow"
+msgstr "Gelb"
+
+#: stadium_seats.lua
+msgid "Brown"
+msgstr "Braun"
+
+#: stadium_seats.lua
+msgid "Orange"
+msgstr "Orange"
+
+#: stadium_seats.lua
+msgid "Red"
+msgstr "Rot"
+
+#: stadium_seats.lua
+msgid "Magenta"
+msgstr "Magenta"
+
+#: stadium_seats.lua
+msgid "Pink"
+msgstr "Rosa"

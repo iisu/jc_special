@@ -447,3 +447,71 @@ msgstr "你在监狱中时无法进入此区域。"
 #: infotext.lua
 msgid "You need server privileges to use this."
 msgstr "你需要服务器权限才能使用此功能。"
+
+#: stadium_seats.lua
+msgid "General Stadium Seat (@1)"
+msgstr "普通体育场座椅（@1）"
+
+#: stadium_seats.lua
+msgid "Dugout Seat (@1)"
+msgstr "替补席座椅（@1）"
+
+#: stadium_seats.lua
+msgid "White"
+msgstr "白色"
+
+#: stadium_seats.lua
+msgid "Grey"
+msgstr "灰色"
+
+#: stadium_seats.lua
+msgid "Dark Grey"
+msgstr "深灰色"
+
+#: stadium_seats.lua
+msgid "Black"
+msgstr "黑色"
+
+#: stadium_seats.lua
+msgid "Violet"
+msgstr "紫罗兰色"
+
+#: stadium_seats.lua
+msgid "Blue"
+msgstr "蓝色"
+
+#: stadium_seats.lua
+msgid "Cyan"
+msgstr "青色"
+
+#: stadium_seats.lua
+msgid "Dark Green"
+msgstr "深绿色"
+
+#: stadium_seats.lua
+msgid "Green"
+msgstr "绿色"
+
+#: stadium_seats.lua
+msgid "Yellow"
+msgstr "黄色"
+
+#: stadium_seats.lua
+msgid "Brown"
+msgstr "棕色"
+
+#: stadium_seats.lua
+msgid "Orange"
+msgstr "橙色"
+
+#: stadium_seats.lua
+msgid "Red"
+msgstr "红色"
+
+#: stadium_seats.lua
+msgid "Magenta"
+msgstr "品红色"
+
+#: stadium_seats.lua
+msgid "Pink"
+msgstr "粉红色"

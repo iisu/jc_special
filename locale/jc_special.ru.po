@@ -447,3 +447,71 @@ msgstr "Вы не можете войти в эту область, находя
 #: infotext.lua
 msgid "You need server privileges to use this."
 msgstr "Для этого нужны права сервера."
+
+#: stadium_seats.lua
+msgid "General Stadium Seat (@1)"
+msgstr "Обычное стадионное сиденье (@1)"
+
+#: stadium_seats.lua
+msgid "Dugout Seat (@1)"
+msgstr "Сиденье на скамейке запасных (@1)"
+
+#: stadium_seats.lua
+msgid "White"
+msgstr "Белый"
+
+#: stadium_seats.lua
+msgid "Grey"
+msgstr "Серый"
+
+#: stadium_seats.lua
+msgid "Dark Grey"
+msgstr "Тёмно-серый"
+
+#: stadium_seats.lua
+msgid "Black"
+msgstr "Чёрный"
+
+#: stadium_seats.lua
+msgid "Violet"
+msgstr "Фиолетовый"
+
+#: stadium_seats.lua
+msgid "Blue"
+msgstr "Синий"
+
+#: stadium_seats.lua
+msgid "Cyan"
+msgstr "Бирюзовый"
+
+#: stadium_seats.lua
+msgid "Dark Green"
+msgstr "Тёмно-зелёный"
+
+#: stadium_seats.lua
+msgid "Green"
+msgstr "Зелёный"
+
+#: stadium_seats.lua
+msgid "Yellow"
+msgstr "Жёлтый"
+
+#: stadium_seats.lua
+msgid "Brown"
+msgstr "Коричневый"
+
+#: stadium_seats.lua
+msgid "Orange"
+msgstr "Оранжевый"
+
+#: stadium_seats.lua
+msgid "Red"
+msgstr "Красный"
+
+#: stadium_seats.lua
+msgid "Magenta"
+msgstr "Пурпурный"
+
+#: stadium_seats.lua
+msgid "Pink"
+msgstr "Розовый"

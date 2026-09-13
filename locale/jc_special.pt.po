@@ -447,3 +447,71 @@ msgstr "Não pode entrar nesta área enquanto estiver preso."
 #: infotext.lua
 msgid "You need server privileges to use this."
 msgstr "Precisa de privilégios de servidor para utilizar isto."
+
+#: stadium_seats.lua
+msgid "General Stadium Seat (@1)"
+msgstr "Assento geral do estádio (@1)"
+
+#: stadium_seats.lua
+msgid "Dugout Seat (@1)"
+msgstr "Assento do banco de suplentes (@1)"
+
+#: stadium_seats.lua
+msgid "White"
+msgstr "Branco"
+
+#: stadium_seats.lua
+msgid "Grey"
+msgstr "Cinzento"
+
+#: stadium_seats.lua
+msgid "Dark Grey"
+msgstr "Cinzento escuro"
+
+#: stadium_seats.lua
+msgid "Black"
+msgstr "Preto"
+
+#: stadium_seats.lua
+msgid "Violet"
+msgstr "Violeta"
+
+#: stadium_seats.lua
+msgid "Blue"
+msgstr "Azul"
+
+#: stadium_seats.lua
+msgid "Cyan"
+msgstr "Ciano"
+
+#: stadium_seats.lua
+msgid "Dark Green"
+msgstr "Verde escuro"
+
+#: stadium_seats.lua
+msgid "Green"
+msgstr "Verde"
+
+#: stadium_seats.lua
+msgid "Yellow"
+msgstr "Amarelo"
+
+#: stadium_seats.lua
+msgid "Brown"
+msgstr "Castanho"
+
+#: stadium_seats.lua
+msgid "Orange"
+msgstr "Laranja"
+
+#: stadium_seats.lua
+msgid "Red"
+msgstr "Vermelho"
+
+#: stadium_seats.lua
+msgid "Magenta"
+msgstr "Magenta"
+
+#: stadium_seats.lua
+msgid "Pink"
+msgstr "Cor-de-rosa"
