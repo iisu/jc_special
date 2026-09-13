@@ -3,25 +3,6 @@
 local S = core.get_translator(core.get_current_modname())
 local modpath = core.get_modpath(core.get_current_modname())
 
-local multidecor_sitting = multidecor and multidecor.sitting
-
-local seat_on_construct = multidecor_sitting and multidecor_sitting.on_construct
-local seat_on_destruct = multidecor_sitting and multidecor_sitting.on_destruct
-local seat_on_rightclick = multidecor_sitting and multidecor_sitting.on_rightclick
-
-local function seat_sitting_data(pos, rot, y)
-  if not multidecor_sitting then
-    return nil
-  end
-
-  return {
-    pos = vector.new(pos.x, y, pos.z),
-    rot = rot,
-    model = multidecor_sitting.standard_model,
-    anims = {"sit1", "sit2"},
-  }
-end
-
 local colors_table = {
   {"white",      S("White") },
   {"grey",       S("Grey") },
@@ -69,12 +50,10 @@ for _, dye in ipairs(colors_table) do
       type = "fixed",
       fixed = {-0.34, -0.52, -0.40, 0.34, 0.52, 0.40},
     },
-    add_properties = {
-      seat_data = seat_sitting_data({x = 0, y = 0, z = 0}, vector.new(0, 0, 0), -0.05),
-    },
-    on_construct = seat_on_construct,
-    on_destruct = seat_on_destruct,
-    on_rightclick = seat_on_rightclick,
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+      return lrfurn.sit(pos, node, clicker, itemstack, pointed_thing, 1)
+    end,
+    on_destruct = lrfurn.on_seat_destruct,
   })
 end
 
@@ -103,11 +82,9 @@ for _, dye in ipairs(colors_table) do
       type = "fixed",
       fixed = {-0.32, -0.55, -0.36, 0.32, 0.55, 0.36},
     },
-    add_properties = {
-      seat_data = seat_sitting_data({x = 0, y = 0, z = 0}, vector.new(0, 0, 0), -0.14),
-    },
-    on_construct = seat_on_construct,
-    on_destruct = seat_on_destruct,
-    on_rightclick = seat_on_rightclick,
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+      return lrfurn.sit(pos, node, clicker, itemstack, pointed_thing, 1)
+    end,
+    on_destruct = lrfurn.on_seat_destruct,
   })
 end
