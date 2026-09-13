@@ -3,6 +3,64 @@
 local S = core.get_translator(core.get_current_modname())
 local modpath = core.get_modpath(core.get_current_modname())
 
+local cushion_alt_players = {
+  crisdan = true,
+  erstazi = true,
+  MrPhil = true,
+  iisu = true,
+  talamh = true,
+  istie = true,
+}
+
+local cushion_cycles = {}
+
+local function stadium_seat_rightclick(pos, node, clicker, itemstack, pointed_thing)
+  if not clicker:is_player() then
+    return itemstack
+  end
+
+  local was_attached = clicker:get_attach()
+
+  local result = lrfurn.sit(pos, node, clicker, itemstack, pointed_thing, 1)
+
+  local is_attached = clicker:get_attach()
+  local name = clicker:get_player_name()
+
+  if not was_attached and is_attached then
+    if cushion_alt_players[name] then
+      cushion_cycles[name] = (cushion_cycles[name] or 0) + 1
+
+      if cushion_cycles[name] % 3 == 1 then
+        core.sound_play("chair_cushion_down_alt", {
+          pos = pos,
+          gain = 1.0,
+          max_hear_distance = 20,
+        })
+      else
+        core.sound_play("chair_cushion_down", {
+          pos = pos,
+          gain = 0.2,
+          max_hear_distance = 20,
+        })
+      end
+    else
+      core.sound_play("chair_cushion_down", {
+        pos = pos,
+        gain = 0.2,
+        max_hear_distance = 20,
+      })
+    end
+  elseif was_attached and not is_attached then
+    core.sound_play("chair_cushion_up", {
+      pos = pos,
+      gain = 0.2,
+      max_hear_distance = 20,
+    })
+  end
+
+  return result
+end
+
 local colors_table = {
   {"white",      S("White") },
   {"grey",       S("Grey") },
@@ -50,9 +108,7 @@ for _, dye in ipairs(colors_table) do
       type = "fixed",
       fixed = {-0.34, -0.52, -0.40, 0.34, 0.52, 0.40},
     },
-    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-      return lrfurn.sit(pos, node, clicker, itemstack, pointed_thing, 1)
-    end,
+    on_rightclick = stadium_seat_rightclick,
     on_destruct = lrfurn.on_seat_destruct,
   })
 end
@@ -82,9 +138,7 @@ for _, dye in ipairs(colors_table) do
       type = "fixed",
       fixed = {-0.32, -0.55, -0.36, 0.32, 0.55, 0.36},
     },
-    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
-      return lrfurn.sit(pos, node, clicker, itemstack, pointed_thing, 1)
-    end,
+    on_rightclick = stadium_seat_rightclick,
     on_destruct = lrfurn.on_seat_destruct,
   })
 end
